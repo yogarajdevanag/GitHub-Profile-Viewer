@@ -1,0 +1,78 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #5D3FD3; /* A nice purple */
+    --primary-hover-color: #4C2AA8;
+    --background-color: #f0f2f5;
+    --surface-color: #ffffff;
+    --text-color: #212529;
+    --text-muted-color: #6c757d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* --- Card & Form Styling --- */
+.card {
+    border: none;
+    border-radius: 0.75rem; /* Softer corners */
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control, .form-select {
+    border-radius: 0.5rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(93, 63, 211, 0.25);
+}
+
+/* --- Button Styling --- */
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+    transform: translateY(-2px); /* A little lift on hover */
+}
+
+/* --- Expense List Item Styling --- */
+.list-group-item {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e9ecef !important; /* Ensure consistent border */
+}
+
+.list-group-item:last-child {
+    border-bottom: none !important;
+}
+
+/* Make action buttons more subtle until hover */
+.list-group-item .btn {
+    opacity: 0.6;
+}
+
+.list-group-item:hover .btn {
+    opacity: 1;
+}
+
+/* Style for icons inside buttons */
+.btn i {
+    pointer-events: none; /* Makes the icon non-clickable so the button click event fires */
+}
+
+/* --- Utility & Text Styling --- */
+.text-primary {
+    color: var(--primary-color) !important;
+}
